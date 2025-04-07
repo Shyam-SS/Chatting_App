@@ -1,0 +1,66 @@
+/* App.css */
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --input-bg: #ffffff;
+  --bubble-bg-own: #0d6efd;
+  --bubble-bg-other: #e9ecef;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --bg-color: #1e1e2f;
+  --text-color: #f1f1f1;
+  --input-bg: #2a2a3b;
+  --bubble-bg-own: #3a5aef;
+  --bubble-bg-other: #3a3a4f;
+}
+
+.form-control,
+.btn {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Message bubbles */
+.message-own {
+  background-color: var(--bubble-bg-own);
+  color: #fff;
+}
+
+.message-other {
+  background-color: var(--bubble-bg-other);
+  color: var(--text-color);
+}
+
+/* Chat container */
+.chat-container {
+  max-width: 768px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-style: italic;
+  color: var(--text-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
